@@ -4,5 +4,6 @@ public class p5 {
         SequenceEnum test = new SequenceEnum();
         test.encapsulate("Nick");
         System.out.println(test.emit());
+        System.out.println("HELLO WORLD");
     }
 }
