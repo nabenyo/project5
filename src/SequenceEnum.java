@@ -1,3 +1,17 @@
+//Documentation
+//Description:
+//Assumptions:
+//Valid States:
+//Anticipated Use:
+
+//String Invert(int index);
+//Description: Invert function will modify the word and invert the letter found of @index with @index+1.
+//If the index supplied is less than 0 or is the last letter of the word or greater, the function will
+//simply return the original word.
+//Pre-conditions:
+//Post-conditions:
+
+
 public class SequenceEnum implements Sequence, Inverter{
     private int state;
     private String word;
@@ -19,11 +33,24 @@ public class SequenceEnum implements Sequence, Inverter{
     }
 
     public String invert(int index){
-        return this.word;
+        if(index >= this.word.length()-1)
+            return this.word;
+        else if(index < 0)
+            return this.word;
+        else {
+            String beginning = this.word.substring(0, index);
+            String end = this.word.substring(index + 2);
+            return beginning + this.word.substring(index + 1, index + 2)
+                    + this.word.substring(index, index + 1) + end;
+        }
     }
 
     public String emit(){
-        return word;
+        if(this.state == 1){
+            return this.word;
+        }else{
+            return this.word;
+        }
     }
 
     public void activate(){

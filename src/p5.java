@@ -1,3 +1,6 @@
+//Program Overview
+//
+
 public class p5 {
 
     public static void main(String[] args) {
@@ -7,6 +10,8 @@ public class p5 {
         System.out.println("Hello World");
         SpasEnum test1 = new SpasEnum();
         test1.activate();
-        System.out.println(test1.isActive());
+        System.out.println(test.invert(-1));
+        System.out.println("Nick".length());
+        //System.out.println("Nick".substring(0,0));
     }
 }
