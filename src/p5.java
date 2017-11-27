@@ -4,6 +4,9 @@ public class p5 {
         SequenceEnum test = new SequenceEnum();
         test.encapsulate("Nick");
         System.out.println(test.emit());
-        System.out.println("HELLO WORLD");
+        System.out.println("Hello World");
+        SpasEnum test1 = new SpasEnum();
+        test1.activate();
+        System.out.println(test1.isActive());
     }
 }

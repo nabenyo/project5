@@ -1,2 +1,2 @@
-public class SeqExtract {
+public class SeqExtract extends SequenceEnum {
 }

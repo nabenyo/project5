@@ -1,2 +1,2 @@
-public class SpasEnum {
+public class SpasEnum extends SequenceEnum {
 }
