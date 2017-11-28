@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1731c485-1f0d-4c40-82bc-3533abc72426" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project5/SequenceEnum.class" afterPath="$PROJECT_DIR$/out/production/project5/SequenceEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project5/p5.class" afterPath="$PROJECT_DIR$/out/production/project5/p5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SpasEnum.java" afterPath="$PROJECT_DIR$/src/SpasEnum.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/p5.java" afterPath="$PROJECT_DIR$/src/p5.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -257,11 +252,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511765348603</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="SpasEnum work, override emit">
+      <created>1511861120791</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1511861120791</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7295000" />
+    <option name="totallyTimeSpent" value="7325000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="134" y="39" width="2863" height="1684" extended-state="0" />
@@ -354,7 +356,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updates to P5, includes the creation of all base files and partial implementation of interfaces and SequenceEnum" />
     <MESSAGE value="Inheritance set for SpasEnum and SeqExtract" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inheritance set for SpasEnum and SeqExtract" />
+    <MESSAGE value="SpasEnum work, override emit" />
+    <option name="LAST_COMMIT_MESSAGE" value="SpasEnum work, override emit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
