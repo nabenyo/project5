@@ -5,11 +5,7 @@
 //Anticipated Use:
 
 //String Invert(int index);
-//Description: Invert function will modify the word and invert the letter found of @index with @index+1.
-//If the index supplied is less than 0 or is the last letter of the word or greater, the function will
-//simply return the original word.
-//Pre-conditions:
-//Post-conditions:
+
 
 
 public class SequenceEnum implements Sequence, Inverter{
@@ -32,6 +28,11 @@ public class SequenceEnum implements Sequence, Inverter{
         return word.length()>=3;
     }
 
+    //Description: Invert function will modify the word and invert the letter found of @index with @index+1.
+    //If the index supplied is less than 0 or is the last letter of the word or greater, the function will
+    //simply return the original word.
+    //Pre-conditions:
+    //Post-conditions:
     public String invert(int index){
         if(index >= this.word.length()-1)
             return this.word;
