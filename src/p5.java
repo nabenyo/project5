@@ -1,14 +1,21 @@
 //Program Overview
 //
-
+import java.util.Random;
 public class p5 {
 
     public static void main(String[] args) {
-        SequenceEnum test = new SequenceEnum();
-        test.encapsulate("Nick");
-        SeqExtract test1 = new SeqExtract();
-        test1.encapsulate("AllenAppleton");
-        System.out.println(test1.invert(7));
-        //System.out.println("Nick".substring(0,0));
+        Sequence[] seqArray = engage();
+        for(int i = 0; i <3; i++){
+            System.out.println(seqArray[i].SequenceEmit());
+        }
+        SeqExtract extract = new SeqExtract("bookkeeper");
+    }
+
+    public static Sequence[] engage(){
+        Sequence[] seqArray = new Sequence[4];
+        seqArray[0] = new Sequence("assessment");
+        seqArray[1] = new SequenceEnum("mississippi");
+        seqArray[2] = new SpasEnum("oppressors");
+        return seqArray;
     }
 }

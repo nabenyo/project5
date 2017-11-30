@@ -4,65 +4,89 @@
 //Valid States:
 //Anticipated Use:
 
-//String Invert(int index);
+import java.util.Random;
 
+public class SequenceEnum extends Sequence implements Inverter{
+    public static final Random rand = new Random();
+    private int SequenceEnumState;
 
-
-public class SequenceEnum implements Sequence, Inverter{
-    private int state;
-    private String word;
-
-    public SequenceEnum(){
-        state = 0;
-    }
-
-    public SequenceEnum(String word){
-        state = 1;
-        this.word = word;
-    }
-
-    public boolean encapsulate(String word){
-        if(word.length()>=3)
-            this.word = word;
-            activate();
-        return word.length()>=3;
-    }
-
-    //Description: Invert function will modify the word and invert the letter found of @index with @index+1.
-    //If the index supplied is less than 0 or is the last letter of the word or greater, the function will
-    //simply return the original word.
+    //Description:
     //Pre-conditions:
     //Post-conditions:
-    public String invert(int index){
-        if(index >= this.word.length()-1)
-            return this.word;
-        else if(index < 0)
-            return this.word;
-        else {
-            String beginning = this.word.substring(0, index);
-            String end = this.word.substring(index + 2);
-            return beginning + this.word.substring(index + 1, index + 2)
-                    + this.word.substring(index, index + 1) + end;
-        }
+    public SequenceEnum(){
+        SequenceEnumState = 0;
     }
 
-    public String emit(){
-        if(this.state == 1){
-            return this.word;
+    //Description:
+    //Pre-conditions:
+    //Post-conditions:
+    public SequenceEnum(String word){
+        super(word);
+        if(word.length() > 2) {
+            SequenceEnumState = 1;
         }else{
-            return this.word;
+            SequenceEnumState = 0;
         }
     }
 
-    public void activate(){
-        state = 1;
+    //Description:
+    //Pre-conditions:
+    //Post-conditions:
+    public boolean encapsulate(String userWord){
+        if(userWord.length()>=3) {
+            super.encapsulate(userWord);
+            SequenceEnumState = 1;
+        }
+        return userWord.length()>=3;
     }
 
-    public void deactivate(){
-        state = 0;
+    //Description:
+    //Pre-conditions:
+    //Post-conditions:
+    public String SequenceEmit(){
+        String word = super.SequenceEmit();
+        if(this.SequenceEnumState == 1){
+            int wordLength = word.length();
+            int location = rand.nextInt(word.length());
+            int insert = rand.nextInt(word.length());
+            return word.substring(0,insert) + word.substring(location
+                    , wordLength) + word.substring(insert);
+        }else{
+            return word;
+        }
     }
 
-    public int isActive(){
-        return state;
+    //Description:
+    //Pre-conditions:
+    //Post-conditions:
+    public boolean SequenceEnumGuess(String word){
+        if(SequenceGuess(word)){
+            SequenceEnumState = 0;
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    //Description:
+    //Pre-conditions:
+    //Post-conditions:
+    public String toString(){
+        return super.toString() + "\nSequenceEnum current state = "
+                + this.SequenceEnumState;
+    }
+
+    //Description:
+    //Pre-conditions:
+    //Post-conditions:
+    public int hashCode(){
+        return 1;
+    }
+
+    //Description:
+    //Pre-conditions:
+    //Post-conditions:
+    public boolean equals(){
+        return true;
     }
 }
