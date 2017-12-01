@@ -11,11 +11,16 @@
 
 
 
-public class Sequence implements Inverter{
+public abstract class Sequence implements Inverter{
 
-    private int SequenceState;
-    private String word;
-    private int guesses;
+    private int SequenceState; //Holds object state, represents the word
+    //being active and not having been guessed. If the word is not active
+    //then the word has not been initialized or has already been guessed
+    //by guessWord() method. Meant to be inherited and used as the primary
+    //state by all subclasses.
+    private String word;//Holds the word for Sequence subclasses. All methods
+    //generall revolve around setting, guessing and manipulating this string.
+    private int guesses;//A count of the guesses made by the user
 
     //Description: Default constructor for sequence. Allows the class to be
     //instantiated prior to the word being set. Used for default construction

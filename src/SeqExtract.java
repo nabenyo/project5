@@ -6,13 +6,10 @@
 
 public class SeqExtract extends Sequence {
 
-    private int SeqExtractState;
-
     //Description:
     //Pre-conditions:
     //Post-conditions:
     public SeqExtract(){
-        SeqExtractState = 0;
     }
 
     //Description:
@@ -20,11 +17,6 @@ public class SeqExtract extends Sequence {
     //Post-conditions:
     public SeqExtract(String userWord){
         super(userWord);
-        if(userWord.length() > 2) {
-            SeqExtractState = 1;
-        }else{
-            SeqExtractState = 0;
-        }
     }
 
     //Description:
@@ -33,7 +25,6 @@ public class SeqExtract extends Sequence {
     public boolean encapsulate(String userWord){
         if(userWord.length()>=3) {
             super.encapsulate(userWord);
-           SeqExtractState = 1;
         }
         return userWord.length()>=3;
     }
@@ -43,7 +34,7 @@ public class SeqExtract extends Sequence {
     //Post-conditions:
     public String SequenceEmit(String userWord){
         String word = super.SequenceEmit();
-        if(SeqExtractState == 1){
+        if(this.getState()== 1){
             return word.replaceFirst(userWord, "");
         }else{
             return word;
@@ -55,7 +46,6 @@ public class SeqExtract extends Sequence {
     //Post-conditions:
     public boolean SequenceGuess(String userWord){
         if(super.SequenceGuess(userWord)){
-            SeqExtractState = 0;
             return true;
         }else{
             return false;
@@ -65,23 +55,15 @@ public class SeqExtract extends Sequence {
     //Description:
     //Pre-conditions:
     //Post-conditions:
-    public int getState(){
-        return SeqExtractState;
-    }
-
-    //Description:
-    //Pre-conditions:
-    //Post-conditions:
-    public String toString(){
-        return super.toString() + "\nSeqExtractState current state = "
-                + this.SeqExtractState;
-    }
-
-    //Description:
-    //Pre-conditions:
-    //Post-conditions:
     public int hashCode(){
-        return 1;
+        String word = this.getWord();
+        String obj = "SeqExtract";
+        int state = this.getState();
+        int result = 17;
+        result = 37 * result + (word == null ? 0 : word.hashCode());
+        result = 37 * result + state;
+        result = 37 * result + obj.hashCode();
+        return result;
     }
 
     //Description:
@@ -89,8 +71,8 @@ public class SeqExtract extends Sequence {
     //Post-conditions:
     public boolean equals(Sequence comparator){
         if(comparator instanceof SeqExtract
-                && this.SeqExtractState ==
-                ((SeqExtract) comparator).SeqExtractState
+                && this.getState() ==
+                ((SeqExtract) comparator).getState()
                 && comparator.getWord() == this.getWord()){
             return true;
         }else{

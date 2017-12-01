@@ -8,13 +8,12 @@ import java.util.Random;
 
 public class SequenceEnum extends Sequence implements Inverter{
     public static final Random rand = new Random();
-    private int SequenceEnumState;
+
 
     //Description:
     //Pre-conditions:
     //Post-conditions:
     public SequenceEnum(){
-        SequenceEnumState = 0;
     }
 
     //Description:
@@ -22,11 +21,6 @@ public class SequenceEnum extends Sequence implements Inverter{
     //Post-conditions:
     public SequenceEnum(String word){
         super(word);
-        if(word.length() > 2) {
-            SequenceEnumState = 1;
-        }else{
-            SequenceEnumState = 0;
-        }
     }
 
     //Description:
@@ -35,7 +29,6 @@ public class SequenceEnum extends Sequence implements Inverter{
     public boolean encapsulate(String userWord){
         if(userWord.length()>=3) {
             super.encapsulate(userWord);
-            SequenceEnumState = 1;
         }
         return userWord.length()>=3;
     }
@@ -45,7 +38,7 @@ public class SequenceEnum extends Sequence implements Inverter{
     //Post-conditions:
     public String SequenceEmit(){
         String word = super.SequenceEmit();
-        if(this.SequenceEnumState == 1){
+        if(getState() == 1){
             int wordLength = word.length();
             int location = rand.nextInt(word.length());
             int insert = rand.nextInt(word.length());
@@ -61,7 +54,6 @@ public class SequenceEnum extends Sequence implements Inverter{
     //Post-conditions:
     public boolean SequenceGuess(String word){
         if(super.SequenceGuess(word)){
-            SequenceEnumState = 0;
             return true;
         }else{
             return false;
@@ -71,23 +63,15 @@ public class SequenceEnum extends Sequence implements Inverter{
     //Description:
     //Pre-conditions:
     //Post-conditions:
-    public int getState(){
-        return SequenceEnumState;
-    }
-
-    //Description:
-    //Pre-conditions:
-    //Post-conditions:
-    public String toString(){
-        return super.toString() + "\nSequenceEnum current state = "
-                + this.SequenceEnumState;
-    }
-
-    //Description:
-    //Pre-conditions:
-    //Post-conditions:
     public int hashCode(){
-        return 1;
+        String word = this.getWord();
+        String obj = "SequenceEnum";
+        int state = this.getState();
+        int result = 17;
+        result = 37 * result + (word == null ? 0 : word.hashCode());
+        result = 37 * result + state;
+        result = 37 * result + obj.hashCode();
+        return result;
     }
 
     //Description:
@@ -95,8 +79,8 @@ public class SequenceEnum extends Sequence implements Inverter{
     //Post-conditions:
     public boolean equals(Sequence comparator){
         if(comparator instanceof SequenceEnum
-                && this.SequenceEnumState ==
-                ((SequenceEnum) comparator).SequenceEnumState
+                && getState() ==
+                ((SequenceEnum) comparator).getState()
                 && comparator.getWord() == this.getWord()){
             return true;
         }else{
