@@ -1,14 +1,18 @@
 //Program Overview
 //
 import java.util.Random;
+import java.util.Scanner;
 public class p5 {
 
     public static void main(String[] args) {
-        Sequence[] seqArray = engage();
+        /*Sequence[] seqArray = engage();
         for(int i = 0; i <3; i++){
             System.out.println(seqArray[i].SequenceEmit());
         }
-        SeqExtract extract = new SeqExtract("bookkeeper");
+        guessingGame(seqArray);*/
+        SequenceEnum newtest = new SequenceEnum("Nick");
+        SequenceEnum comparison = new SequenceEnum("Nick");
+        System.out.println(newtest.equals(comparison));
     }
 
     public static Sequence[] engage(){
@@ -17,5 +21,24 @@ public class p5 {
         seqArray[1] = new SequenceEnum("mississippi");
         seqArray[2] = new SpasEnum("oppressors");
         return seqArray;
+    }
+
+    public static void guessingGame(Sequence[] seqArray){
+        Scanner input = new Scanner(System.in);
+        for(Sequence x:seqArray){
+            while(x.getState() == 1){
+                System.out.print("Please guess the following word: ");
+                System.out.println(x.SequenceEmit());
+                boolean result = x.SequenceGuess(input.nextLine());
+                if(!result){
+                    System.out.println("I'm sorry, that was incorrect, " +
+                            "please guess again");
+                }else{
+                    System.out.println("\nGreat job! You guessed the word!\n");
+                    System.out.println(x.toString());
+                    System.out.println("\n\n");
+                }
+            }
+        }
     }
 }

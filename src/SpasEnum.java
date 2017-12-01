@@ -4,9 +4,6 @@
 //Valid States:
 //Anticipated Use:
 
-
-import java.util.Random;
-
 public class SpasEnum extends Sequence {
 
     private int SpasEnumState;
@@ -56,13 +53,20 @@ public class SpasEnum extends Sequence {
     //Description:
     //Pre-conditions:
     //Post-conditions:
-    public boolean SpasEnumGuess(String userWord){
-        if(SequenceGuess(userWord)){
+    public boolean SequenceGuess(String userWord){
+        if(super.SequenceGuess(userWord)){
             SpasEnumState = 0;
             return true;
         }else{
             return false;
         }
+    }
+
+    //Description:
+    //Pre-conditions:
+    //Post-conditions:
+    public int getState(){
+        return SpasEnumState;
     }
 
     //Description:
@@ -83,7 +87,14 @@ public class SpasEnum extends Sequence {
     //Description:
     //Pre-conditions:
     //Post-conditions:
-    public boolean equals(){
-        return true;
+    public boolean equals(Sequence comparator){
+        if(comparator instanceof SpasEnum
+                && this.SpasEnumState ==
+                ((SpasEnum) comparator).SpasEnumState
+                && comparator.getWord() == this.getWord()){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

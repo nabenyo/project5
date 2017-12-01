@@ -15,6 +15,7 @@ public class Sequence implements Inverter{
 
     private int SequenceState;
     private String word;
+    private int guesses;
 
     //Description: Default constructor for sequence. Allows the class to be
     //instantiated prior to the word being set. Used for default construction
@@ -92,15 +93,33 @@ public class Sequence implements Inverter{
     //Pre-conditions: Word has been instantiated and object in a valid state
     //Post-conditions:
     public boolean SequenceGuess(String userWord){
+        guesses++;
+        if(this.word.equals(userWord)){
+            SequenceState = 0;
+        }
         return this.word.equals(userWord);
+    }
+
+    //Description:
+    //Pre-conditions:
+    //Post-conditions:
+    public int getState(){
+        return SequenceState;
+    }
+
+    //Description:
+    //Pre-conditions:
+    //Post-conditions:
+    public String getWord(){
+        return this.word;
     }
 
     //Description: Prints out the current state of the objects and the word.
     //Pre-conditions: None
     //Post-conditions: None
     public String toString(){
-        return "word: " + this.word + "\nSequence current state = "
-                + this.SequenceState;
+        return "word: " + this.word + "\ntotal guesses: " + guesses +
+                "\nSequence current state = " + this.SequenceState;
     }
 
     //Description: Prints a unique value to associate with the object
@@ -113,7 +132,14 @@ public class Sequence implements Inverter{
     //Description: Used to compare two objects and determine if they are equal
     //Pre-conditions: None
     //Post-conditions: None
-    public boolean equals(){
-        return true;
+    public boolean equals(Sequence comparator){
+        if(comparator instanceof SeqExtract
+                && this.SequenceState ==
+                comparator.SequenceState
+                && comparator.getWord() == this.getWord()){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

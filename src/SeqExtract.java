@@ -4,9 +4,6 @@
 //Valid States:
 //Anticipated Use:
 
-
-import java.util.Random;
-
 public class SeqExtract extends Sequence {
 
     private int SeqExtractState;
@@ -56,13 +53,20 @@ public class SeqExtract extends Sequence {
     //Description:
     //Pre-conditions:
     //Post-conditions:
-    public boolean SeqExtractGuess(String userWord){
-        if(SequenceGuess(userWord)){
+    public boolean SequenceGuess(String userWord){
+        if(super.SequenceGuess(userWord)){
             SeqExtractState = 0;
             return true;
         }else{
             return false;
         }
+    }
+
+    //Description:
+    //Pre-conditions:
+    //Post-conditions:
+    public int getState(){
+        return SeqExtractState;
     }
 
     //Description:
@@ -83,7 +87,14 @@ public class SeqExtract extends Sequence {
     //Description:
     //Pre-conditions:
     //Post-conditions:
-    public boolean equals(){
-        return true;
+    public boolean equals(Sequence comparator){
+        if(comparator instanceof SeqExtract
+                && this.SeqExtractState ==
+                ((SeqExtract) comparator).SeqExtractState
+                && comparator.getWord() == this.getWord()){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

@@ -59,13 +59,20 @@ public class SequenceEnum extends Sequence implements Inverter{
     //Description:
     //Pre-conditions:
     //Post-conditions:
-    public boolean SequenceEnumGuess(String word){
-        if(SequenceGuess(word)){
+    public boolean SequenceGuess(String word){
+        if(super.SequenceGuess(word)){
             SequenceEnumState = 0;
             return true;
         }else{
             return false;
         }
+    }
+
+    //Description:
+    //Pre-conditions:
+    //Post-conditions:
+    public int getState(){
+        return SequenceEnumState;
     }
 
     //Description:
@@ -86,7 +93,14 @@ public class SequenceEnum extends Sequence implements Inverter{
     //Description:
     //Pre-conditions:
     //Post-conditions:
-    public boolean equals(){
-        return true;
+    public boolean equals(Sequence comparator){
+        if(comparator instanceof SequenceEnum
+                && this.SequenceEnumState ==
+                ((SequenceEnum) comparator).SequenceEnumState
+                && comparator.getWord() == this.getWord()){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
