@@ -7,13 +7,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project5/SequenceEnum.class" afterPath="$PROJECT_DIR$/out/production/project5/SequenceEnum.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project5/SpasEnum.class" afterPath="$PROJECT_DIR$/out/production/project5/SpasEnum.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/project5/p5.class" afterPath="$PROJECT_DIR$/out/production/project5/p5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SeqExtract.java" afterPath="$PROJECT_DIR$/src/SeqExtract.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Sequence.java" afterPath="$PROJECT_DIR$/src/Sequence.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SequenceEnum.java" afterPath="$PROJECT_DIR$/src/SequenceEnum.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SpasEnum.java" afterPath="$PROJECT_DIR$/src/SpasEnum.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/p5.java" afterPath="$PROJECT_DIR$/src/p5.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -260,7 +254,7 @@
       <workItem from="1511933264823" duration="1630000" />
       <workItem from="1512018195951" duration="5079000" />
       <workItem from="1512029933140" duration="12334000" />
-      <workItem from="1512092081022" duration="5740000" />
+      <workItem from="1512092081022" duration="5752000" />
     </task>
     <task id="LOCAL-00001" summary="Updates to P5, includes the creation of all base files and partial implementation of interfaces and SequenceEnum">
       <created>1511689183412</created>
@@ -311,15 +305,21 @@
       <option name="project" value="LOCAL" />
       <updated>1512085174121</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Major updates to all classes and interfaces">
+      <created>1512098898008</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1512098898008</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31476000" />
+    <option name="totallyTimeSpent" value="31488000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="134" y="35" width="3066" height="1765" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -329,7 +329,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32813516" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32813516" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998455" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
